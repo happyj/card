@@ -1,6 +1,19 @@
 #include "CardCardContent.h"
 #include "CardDef.h"
-#include "CardContentArgs.h"
+#include "CardCardContentArgs.h"
+
+
+CCardCardContent::CCardCardContent(int id, int card)
+: CCardContent(id)
+, m_Card(card)
+{
+
+}
+
+CCardCardContent::~CCardCardContent()
+{
+
+}
 
 bool CCardCardContent::CanExec(const CCardContentArgs& args) const
 {
@@ -11,5 +24,7 @@ bool CCardCardContent::CanExec(const CCardContentArgs& args) const
 
 void CCardCardContent::Exec(const CCardContentArgs& args)
 {
-
+	CCardCardContentArgs& e = (CCardCardContentArgs&)args;
+	if (e.GetCard() == m_Card)
+		CalcState();
 }

@@ -10,6 +10,14 @@
 class CCardTaskContentArgs : public CCardContentArgs
 {
 public:
+	CCardTaskContentArgs(int task)
+		:CCardContentArgs()
+		, m_Task(task)
+	{}
+	virtual ~CCardTaskContentArgs()
+	{}
+
+public:
 	virtual ECardContentType Type() const
 	{
 		return ECardContentType_Task;

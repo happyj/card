@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CardCardContent.h" />
+    <ClInclude Include="CardCardContentArgs.h" />
     <ClInclude Include="CardContent.h" />
     <ClInclude Include="CardContentArgs.h" />
     <ClInclude Include="CardDef.h" />
